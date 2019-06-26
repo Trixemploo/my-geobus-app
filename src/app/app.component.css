@@ -1,0 +1,110 @@
+@font-face {
+    font-family: "Avenir Light";
+    src: url("C:/Users/Utilisateur/my-app/src/AvenirLTStd-Light.woff");
+  } 
+ 
+ ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #3200E6;
+    font-family: "Avenir Light", sans-serif;
+    letter-spacing: 2px;
+    width: 92vw;
+    border-bottom: 1px solid #bbb;
+  }
+
+  #logobar {
+    position: fixed;
+    top: 0;
+    left:0;
+    z-index: 10000;
+  }
+  
+  li {
+    float: left;
+    border-left: 1px solid #bbb;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li:last-child{
+      border-left: none; 
+  }
+
+/* ====================================================================================== */
+
+
+  li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover, .dropdown:hover .dropbtn {
+    /* background-color: #8DDAF5; */
+    background-color: rgba(185, 190, 255, 0.527);
+  }
+  
+  li.dropdown {
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #bccdfd;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {background-color: #a7baee;}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  /* ======================================================================================= */
+
+  .notification {
+    background-color: #3200E6;
+    color: white;
+    text-decoration: none;
+    /* padding: 15px 26px; */
+    padding: 4px 4px;
+    position: relative;
+    display: inline-block;
+    border-radius: 1px;
+  }
+  
+  .notification:hover {
+    background: red;
+  }
+  
+  .notification .badge {
+    position: absolute;
+    top: 3px;
+    right: 5px;
+    padding: 1px 1px;
+    border-radius: 50%;
+    background: red;
+    color: white;
+  }

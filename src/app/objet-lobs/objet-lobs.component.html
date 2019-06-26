@@ -1,0 +1,18 @@
+<div>
+<span style="padding-left: 0.5vw;font-family: Avenir Light,sans-serif;font-size: 3rem;">
+  Geobus flux
+</span>
+<table>
+    <tr>
+      <th>Nom</th>
+      <th style="color: red">KO</th>
+      <th style="color: rgb(47, 255, 116)">OK</th>
+      <th style="color: rgb(255, 172, 47)">Pending</th>
+      <th style="color: lightgray">okManuel</th>
+      <th style="color: lightgray">abandonManuel</th>
+    </tr>
+    <tr *ngFor="let l of lobsService.getLobs()">
+      <td *ngFor="let a of o(l)">{{l[a]}}</td>
+    </tr>
+  </table>
+</div>

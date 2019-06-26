@@ -1,0 +1,39 @@
+<!-- <button (click)="get()">faire le get</button> -->
+<span style="padding-left: 0.5vw;margin-bottom: 0; padding-bottom: 0; font-family: Avenir Light,sans-serif;font-size: 3rem;">My apps</span>
+<br>
+<div class="div-apps" style="margin: 0;background-color: rgba(0, 153, 255, 0.418);border-radius: 10px; border: 10px outset #000; border-left-width: 0;border-right-width: 0;" >
+    <div class="swiper-objet">
+        <swiper [config]="config" #sw>
+            <div id="ngfor" *ngFor ="let a of appsService.selected()" style="padding:0">
+                <!-- <div *ngIf="appsService.list2?.indexOf(a.nom) > -1"> -->
+                    <div class="flip-card" id="swiper-element">
+                        <div class="flip-card-inner">
+                          <div class="flip-card-front">
+                            <img style="width: 100%;height: 100%;" src="https://media.licdn.com/dms/image/C4E0BAQG8ZOa4MyZWfw/company-logo_200_200/0?e=2159024400&v=beta&t=zTQ3q6sTPIWyNwtXOh4ELGQRPVy_w5Ue0Bpo2ADAb6w" alt={{a.nom}}>
+                          </div>
+                          <div class="flip-card-back">
+                            <h1 style="margin:0;padding-top: 0.5rem">{{a.nom}}</h1>
+                            <div *ngFor ="let u of a.urls">
+                                <p style="margin:0.4rem;padding:0"><a class="liens" href={{u.url}}>{{u.title}}</a></p>
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                  <!-- </div> -->
+                </div>
+        </swiper>
+      </div>
+</div>
+
+
+
+
+<!-- <dual-list style="font-family: Avenir Ligth, sans-serif" [source]="list" [(destination)]="list2"></dual-list> -->
+<!-- <input type="text" (input)="save()" [(ngModel)]="coucou"> -->
+
+
+
+
+
+
+

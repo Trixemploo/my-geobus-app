@@ -1,0 +1,115 @@
+.all{
+    font-family: URW Gothic L, sans-serif;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+nav > ul{
+    font-family: URW Gothic L, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+nav > ul > li{
+    font-family: URW Gothic L, sans-serif;
+    float: left;
+    position: relative;
+}
+
+nav li{
+    font-family: URW Gothic L, sans-serif;
+    list-style-type: none;
+}
+
+.submenu{
+    display: none;
+}
+
+nav{
+    font-family: URW Gothic L, sans-serif;
+    width: 100%;
+    /* background-color: #424558; */
+    background-color: #3200E6;
+    /* border-radius: 10px; */
+}
+
+nav > ul::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+nav a{
+    font-family: URW Gothic L, sans-serif;
+    display: inline-block;
+    text-decoration: none;
+}
+
+nav > ul > li > a{
+    font-family: URW Gothic L, sans-serif;
+    /* padding: 20px 60px; */
+    /* padding: 1vw 3.5vw; */
+    padding: 5% 11.45vw;
+    color: #FFF;
+}
+
+nav li:hover .submenu{
+    display: inline-block;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    padding: 0px;
+    z-index: 1000;
+}
+
+.submenu li{
+    border-bottom: 1px solid #CCC;
+}
+
+.submenu li a{
+    /* padding: 15px 60px; */
+    padding: 8% 11.8vw;
+    font-size: 0.1vw;
+    color: #FFF;
+    font-size: 20px;
+}
+
+nav > ul > li:hover a{
+    /* padding: 15px 60px 20px 60px; */
+    /* padding: 0.6vw 3.5vw 1vw 3.5vw; */
+    padding: 8% 11.8vw 4% 11.8vw;
+}
+
+/* ============================================================= */
+
+.menu-accueil:hover{
+    /* border-top: 5px solid #0011ad; */
+    background-color:rgba(000,112,192,0.5)
+}
+.menu-infos:hover{
+    /* border-top: 5px solid #0011ad; */
+    background-color: rgba(0, 67, 192, 0.5)
+}
+.menu-contact:hover{
+    /* border-top: 5px solid #0011ad; */
+    background-color: rgba(000,112,192,0.5)
+}
+/* ====================== */
+
+.menu-infos .submenu{
+    background-color: #0044ff;
+}
+
+.menu-contact .submenu{
+    background-color: #8DDAF5;
+}
+/* ====================== */
+
+.menu-infos .submenu li:hover{
+    background-color: #0039d6;
+}
+
+.menu-contact .submenu li:hover{
+    background-color: #0039d6;
+}

@@ -1,0 +1,9 @@
+<div *ngIf="appsService.list">
+  <span style="padding-left: 0.5vw;font-family: Avenir Light,sans-serif;font-size: 3rem;">My settings</span>
+  <br>
+  <br>
+  <dual-list style="font-family: Avenir Ligth, sans-serif;" [source]="appsService.list" [(destination)]="appsService.list2">
+  </dual-list>
+  <br>
+  <button (click)="appsService.save()">Save settings</button>
+</div>
