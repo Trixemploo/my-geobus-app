@@ -14,7 +14,7 @@ export class ObjetImageComponent implements OnInit {
   }
 
   ngAfterViewInit(){
-    //this.appsService.get();
+    this.appsService.get();
     // this.list=JSON.parse(localStorage.getItem("list"));
     // this.list2=JSON.parse(localStorage.getItem("list2"))
   }

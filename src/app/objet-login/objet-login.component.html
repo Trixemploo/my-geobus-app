@@ -1,0 +1,31 @@
+<!-- <form action="/action_page.php">
+  Username:<br>
+  <input type="text" name="username">
+  <br>
+  <br>
+  Password:
+  <br>
+  <input type="password" name="password">
+  <br><br>
+  <input type="submit" value="Login">
+  </form> -->
+
+  <br>
+  <br>
+  <h3 style="width: 100%; text-align: center;font-family: Avenir Light, sans-serif;color: #3200E6;font-size: 1.5vw"><u>Login</u></h3>
+  <div class="input-field1">
+      <input type="text" #name id="name" required />
+      <label for="name">Username:</label>
+    </div>
+    <br>
+
+    <div class="input-field1">
+        <input type="password" #pass id="pass" required />
+        <label for="pass">Password:</label>
+      </div>
+      <br>
+
+    <div class="login-button">
+      <button style="border-radius: 10px" autofocus (click)="loginService.login(name.value,pass.value)">Login</button>
+    </div>
+      

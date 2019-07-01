@@ -39,5 +39,11 @@ export class AppsService {
           console.log(this.list);
         }
       );
+
+      if(localStorage.getItem("list"))
+      this.list=JSON.parse(localStorage.getItem("list"));
+  
+      if(localStorage.getItem("list2"))
+      this.list2=JSON.parse(localStorage.getItem("list2"))
     }
 }

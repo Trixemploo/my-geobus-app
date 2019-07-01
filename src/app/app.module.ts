@@ -15,6 +15,10 @@ import { SWIPER_CONFIG } from 'ngx-swiper-wrapper';
 import { SwiperConfigInterface } from 'ngx-swiper-wrapper';
 import { ObjetLobsComponent } from './objet-lobs/objet-lobs.component';
 
+import { ClickOutsideModule } from 'ng-click-outside';
+import { ObjetLoginComponent } from './objet-login/objet-login.component';
+
+
  
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   direction: 'horizontal',
@@ -28,6 +32,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     ObjetMenuComponent,
     ObjetSettingsComponent,
     ObjetLobsComponent,
+    ObjetLoginComponent,
   ],
   imports: [    FormsModule,
 
@@ -35,6 +40,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     SwiperModule,
     HttpClientModule,
     AngularDualListBoxModule,
+    ClickOutsideModule,
   ],
   providers: [
     {
@@ -45,4 +51,6 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
   bootstrap: [AppComponent],
   
 })
-export class AppModule { }
+export class AppModule { 
+
+}
