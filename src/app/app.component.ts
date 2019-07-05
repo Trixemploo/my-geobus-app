@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { HttpClient }    from '@angular/common/http';
 import { element } from 'protractor';
+import { LoginService } from './login.service';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
   selector: 'app-root',
@@ -8,6 +10,15 @@ import { element } from 'protractor';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  constructor(
+    private logs: LoginService,
+    private cookieService: CookieService,
+  ){}
+
+  ngOnInit(){
+    this.logs.RemindLogs();
+    console.log(this.logs._username,this.logs._password,this.logs._remember,"1");
+  }
 
   title = 'my-app';
   h=false;
@@ -16,13 +27,19 @@ export class AppComponent {
   a=false;
   b=false;
 
-  islogged = false;
+  Disconnect(){
+    this.logs._islogged = false;
+    this.logs.Forgetlogs();
+    this.cookieService.deleteAll();
+    console.log("disconnected")
+  }
 
   clickOutsidediv(){
     if(this.h)
       this.h =false;
     if(this.a)
       this.a =false;
+    
     return;
   }
 

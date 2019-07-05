@@ -1,0 +1,16 @@
+<div>
+    <span style="padding-left: 0.5vw;font-family: Avenir Light,sans-serif;font-size: 3rem;">
+      Geobus flux statistics
+    </span>
+    <table>
+        <tr>
+          <th>Date</th>
+          <th style="color: red">LoB</th>
+          <th style="color: rgb(47, 255, 116)">Status</th>
+          <th style="color: rgb(255, 172, 47)">Count</th>
+        </tr>
+        <tr *ngFor="let l of lobsgeneralService.lobs">
+          <td *ngFor="let a of o(l)">{{l[a]}}</td>
+        </tr>
+      </table>
+    </div>

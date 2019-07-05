@@ -17,7 +17,9 @@ import { ObjetLobsComponent } from './objet-lobs/objet-lobs.component';
 
 import { ClickOutsideModule } from 'ng-click-outside';
 import { ObjetLoginComponent } from './objet-login/objet-login.component';
+import { ObjetEtatComponent } from './objet-etat/objet-etat.component';
 
+import { CookieService } from 'ngx-cookie-service';
 
  
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
@@ -33,9 +35,10 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     ObjetSettingsComponent,
     ObjetLobsComponent,
     ObjetLoginComponent,
+    ObjetEtatComponent,
   ],
-  imports: [    FormsModule,
-
+  imports: [    
+    FormsModule,
     BrowserModule,
     SwiperModule,
     HttpClientModule,
@@ -46,7 +49,8 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     {
       provide: SWIPER_CONFIG,
       useValue: DEFAULT_SWIPER_CONFIG
-    }
+    },
+    CookieService,
   ],
   bootstrap: [AppComponent],
   

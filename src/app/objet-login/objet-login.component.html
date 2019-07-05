@@ -10,6 +10,32 @@
   <input type="submit" value="Login">
   </form> -->
 
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
+  <script>
+  window.addEventListener("load", function(){
+  window.cookieconsent.initialise({
+    "palette": {
+      "popup": {
+        "background": "#237afc"
+      },
+      "button": {
+        "background": "#fff",
+        "text": "#237afc"
+      }
+    },
+    "theme": "classic",
+    "position": "bottom-right"
+  })});
+  </script>
+
+
+  <script type="text/javascript">
+
+    var elementCheckBox = document.getElementById("IdOfCheckBox");
+    elementCheckBox[0].checked //return true if checked and false if not checked
+
+  </script>
   <br>
   <br>
   <h3 style="width: 100%; text-align: center;font-family: Avenir Light, sans-serif;color: #3200E6;font-size: 1.5vw"><u>Login</u></h3>
@@ -22,10 +48,19 @@
     <div class="input-field1">
         <input type="password" #pass id="pass" required />
         <label for="pass">Password:</label>
+    </div>
+    <div *ngIf="loginService._badPassword">
+        <p style="color: red;font-family: Avenir Light,sans-serif">Wrong username or password.</p>
+    </div>
+    
+    <br *ngIf="!loginService._badPassword">
+      <div style="left: 0;display: inline;font-family: Avenir Light,sans-serif">
+          <input type="checkbox" id="remember" #rem value="remember" [(ngModel)]="loginService._remember">
+          Se souvenir de moi ?
       </div>
       <br>
 
     <div class="login-button">
-      <button style="border-radius: 10px" autofocus (click)="loginService.login(name.value,pass.value)">Login</button>
+      <button style="border-radius: 10px" (click)="loginService.login(name.value,pass.value,rem.checked);sleep()">Login</button>
     </div>
       

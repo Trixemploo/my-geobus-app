@@ -10,3 +10,10 @@ button {
     font-family: "Avenir Light",sans-serif;
     outline: none;
   }
+
+button:hover {background-color: rgb(37, 0, 172)}
+
+button:active {
+  background-color: rgb(37, 0, 172);
+  transform: translateY(4px);
+}

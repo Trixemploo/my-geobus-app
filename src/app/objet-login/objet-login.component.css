@@ -59,7 +59,7 @@
     transition: 0.2s all;
     cursor: text;
   }
-  input {
+  .input-field1 > input {
     width: 100%;
     border: 0;
     outline: 0;

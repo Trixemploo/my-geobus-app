@@ -4,15 +4,23 @@
 </span>
 <table>
     <tr>
-      <th>Nom</th>
+      <th style="text-align: left;">Nom</th>
+      <th style="color: lightgray">Total</th>
       <th style="color: red">KO</th>
-      <th style="color: rgb(47, 255, 116)">OK</th>
       <th style="color: rgb(255, 172, 47)">Pending</th>
-      <th style="color: lightgray">okManuel</th>
-      <th style="color: lightgray">abandonManuel</th>
+      <th style="color: rgb(47, 255, 116)">OK</th>
+      <th style="color: lightgray">OkManuel</th>
+      <th style="color: lightgray">AbandonManuel</th>
     </tr>
-    <tr *ngFor="let l of lobsService.getLobs()">
-      <td *ngFor="let a of o(l)">{{l[a]}}</td>
+    <tr *ngFor="let l of lobsService.fluxs">
+        <td style="text-align: left;">{{l.statistics.exchangeNameDTO.name}}</td>
+        <td>{{l.statistics.nbTotalExchangeInstance}}</td>
+        <td>{{l.statistics.nbFailedExchangeInstance}}</td>
+        <td>{{l.statistics.nbPendingExchangeInstance}}</td>
+        <td>{{l.statistics.nbDirectSuccessExchangeInstance}}</td>
+        <td>{{l.statistics.nbResolvedExchangeInstance}}</td>
+        <td>{{l.statistics.nbDiscardedExchangeInstance}}</td>
     </tr>
   </table>
+  <button id="myBtn-lobs" (click)="lobsService.getfavs()">Refresh</button>
 </div>

@@ -1,6 +1,6 @@
 @font-face {
     font-family: "Avenir Light";
-    src: url("C:/Users/aurelien.gonnand/Desktop/my-geobus-app-master/src/AvenirLTStd-Light.woff");
+    src: url("../AvenirLTStd-Light.woff");
   } 
  
  ul {
@@ -237,16 +237,46 @@
 
 /* =================================================================== */
 
-.parallax {
-  /* The image used */
-  background-image: url('bg-idk.jpg');
-  height: 100%; 
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+
+.icon-bar {
+  width: 4vw; /* Set a specific width */
+  background-color: #555; /* Dark-grey background */
 }
-/* 
-.content-page{
-  background-image: url('bg-idk.jpg')
-} */
+
+.icon-bar a {
+  display: block; /* Make the links appear below each other instead of side-by-side */
+  text-align: center; /* Center-align text */
+  padding: 16px; /* Add some padding */
+  transition: all 0.3s ease; /* Add transition for hover effects */
+  color: gray; /* White text color */
+  font-size: 150%; /* Increased font-size */
+}
+
+.icon-bar .yt:hover {
+  background:#bb0000;
+  color: white;
+}
+
+.icon-bar .fb:hover {
+  background:#3B5998;
+  color: white;
+}
+
+.icon-bar .twi:hover {
+  background:#55ACEE;
+  color: white;
+}
+
+.icon-bar .lin:hover {
+  background:#007bb5;
+  color: white;
+}
+
+.icon-bar .mail:hover {
+  background:rgb(93, 77, 240);
+  color: white;
+}
+
+
+/* ================================================================================ */
+
