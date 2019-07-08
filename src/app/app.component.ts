@@ -3,6 +3,7 @@ import { HttpClient }    from '@angular/common/http';
 import { element } from 'protractor';
 import { LoginService } from './login.service';
 import { CookieService } from 'ngx-cookie-service';
+import { StatsService } from './stats.service';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +14,7 @@ export class AppComponent {
   constructor(
     private logs: LoginService,
     private cookieService: CookieService,
+    private stats: StatsService,
   ){}
 
   ngOnInit(){
@@ -26,6 +28,9 @@ export class AppComponent {
 
   a=false;
   b=false;
+
+  c=false;
+  d=false;
 
   Disconnect(){
     this.logs._islogged = false;
@@ -51,6 +56,17 @@ export class AppComponent {
     }
     else{
       this.h = false;
+    }
+  }
+
+  onClickedOutsideAbout(e: Event) {
+    console.log('Clicked outside:', e);
+    if(!this.d){
+      this.c = true;
+      this.d = true;
+    }
+    else{
+      this.c = false;
     }
   }
 

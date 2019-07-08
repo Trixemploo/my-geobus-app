@@ -41,7 +41,7 @@ export class ObjetLoginComponent implements OnInit {
   }
 
   sleep(){
-    this.delay(150).then(any=>{
+    this.delay(200).then(any=>{
       this.closeWindow();
  });
   }
