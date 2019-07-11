@@ -28,7 +28,7 @@ export class AppsService {
     }
     get(){
 
-      this.http.get<[]>("http://localhost:8999/applications").subscribe(
+      this.http.get<[]>("https://apm-gateway-val-rct.extranet.geodis.org/t/geobus.corp.geodis.org/gest-swaggerised/VAL/applications").subscribe(
         r=>{
           this.apps=r;
           if(!localStorage.getItem("list") && !localStorage.getItem("list2"))

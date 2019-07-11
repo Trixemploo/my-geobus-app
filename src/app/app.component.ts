@@ -4,6 +4,8 @@ import { element } from 'protractor';
 import { LoginService } from './login.service';
 import { CookieService } from 'ngx-cookie-service';
 import { StatsService } from './stats.service';
+import { ArticleService } from './article.service';
+import { DefilanteService } from './defilante.service';
 
 @Component({
   selector: 'app-root',
@@ -15,6 +17,8 @@ export class AppComponent {
     private logs: LoginService,
     private cookieService: CookieService,
     private stats: StatsService,
+    private arti: ArticleService,
+    private def: DefilanteService,
   ){}
 
   ngOnInit(){

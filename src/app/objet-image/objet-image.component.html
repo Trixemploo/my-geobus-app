@@ -9,12 +9,17 @@
                     <div class="flip-card" id="swiper-element">
                         <div class="flip-card-inner">
                           <div class="flip-card-front">
-                            <img style="width: 100%;height: 100%;" src="https://media.licdn.com/dms/image/C4E0BAQG8ZOa4MyZWfw/company-logo_200_200/0?e=2159024400&v=beta&t=zTQ3q6sTPIWyNwtXOh4ELGQRPVy_w5Ue0Bpo2ADAb6w" alt={{a.nom}}>
+                            <img *ngIf="a.images!='none'" style="width: 100%;height: 100%;" src={{a.images}} alt={{a.nom}}>
+                            <div *ngIf="a.images=='none'" style="width: 100%;height: 100%; background: #3200E6;text-align: center;position: relative;">
+                              <div style="position: absolute;top:35%;width: 100%">
+                                  <h2 style="text-align: center;color: white">{{a.nom}}</h2>
+                              </div>
+                            </div>
                           </div>
                           <div class="flip-card-back">
-                            <h1 style="margin:0;padding-top: 0.5rem">{{a.nom}}</h1>
+                            <h2 style="margin:0;padding-top: 0.5rem">{{a.nom}}</h2>
                             <div *ngFor ="let u of a.urls">
-                                <p style="margin:0.4rem;padding:0"><a class="liens" href={{u.url}}>{{u.title}}</a></p>
+                                <p style="margin:0.4rem;padding:0"><a class="liens" target="_blank" href={{u.url}}>{{u.title}}</a></p>
                             </div>
                           </div>
                         </div>

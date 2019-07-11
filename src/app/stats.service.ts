@@ -31,6 +31,7 @@ export class StatsService {
       .subscribe(
         r =>{
           this.result = r;
+          console.log(`${year}-${monthIndex}-${day}T00:00:00.000GMT`)
         },
         e=>{console.log("stats error")});
     }

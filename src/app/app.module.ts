@@ -20,6 +20,7 @@ import { ObjetLoginComponent } from './objet-login/objet-login.component';
 import { ObjetEtatComponent } from './objet-etat/objet-etat.component';
 
 import { CookieService } from 'ngx-cookie-service';
+import { ObjetArticleComponent } from './objet-article/objet-article.component';
 
  
 const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
@@ -36,6 +37,7 @@ const DEFAULT_SWIPER_CONFIG: SwiperConfigInterface = {
     ObjetLobsComponent,
     ObjetLoginComponent,
     ObjetEtatComponent,
+    ObjetArticleComponent,
   ],
   imports: [    
     FormsModule,

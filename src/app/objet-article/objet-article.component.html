@@ -1,0 +1,14 @@
+<div class="div-apps" style="margin: 0;border-radius: 10px; border: 10px outset #000; border-left-width: 0;border-right-width: 0;height: 30vw;width: 100%;" >
+    <div class="swiper-objet" style="height: 100%;width: 100%;">
+        <swiper [config]="config" #sw style="height: 100%;width: 60vw;padding-bottom: 10em">
+            <div id="ngfor" *ngFor ="let a of arti.articles" style="padding:0;height: 100%;width: 100%;">
+                    <div id="swiper-element" style="background: url('{{a.image}}');">
+                        <h1 style="text-align: left;color: '{{a.fontcolor}}'">{{a.title}}</h1>
+                        <h2 style="text-align: left">Résumé :</h2>
+                        <p style="overflow-x: hidden;width: 80%;text-align: left;margin-bottom: 3em;">{{a.summary}}</p>
+                        <a href="#{{a.title}}">{{a.linklabel}}</a>
+                     </div>
+             </div>
+         </swiper>
+     </div>
+  </div>
