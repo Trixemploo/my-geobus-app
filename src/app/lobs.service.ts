@@ -21,7 +21,8 @@ export class LobsService {
     if(this._sidkey && this._sidkey!="off")
     this.http.get<[]>("https://apm-gateway-rct.extranet.geodis.org/gest/favoritesexchange?startTime=2018-11-27 00:00:00&endTime=2019-07-27 23:00:00",{headers: {sid:this._sidkey.sid}, withCredentials:true}).subscribe(
       r=>{
-        this.fluxs=r;}, e=>console.log("error"))
+        this.fluxs=r;
+      console.log("CA FONCTIONNE OMG LOL")}, e=>console.log("error"))
   }
 }
 

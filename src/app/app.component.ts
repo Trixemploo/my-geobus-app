@@ -6,6 +6,7 @@ import { CookieService } from 'ngx-cookie-service';
 import { StatsService } from './stats.service';
 import { ArticleService } from './article.service';
 import { DefilanteService } from './defilante.service';
+import { LobsService } from './lobs.service';
 
 @Component({
   selector: 'app-root',
@@ -19,13 +20,19 @@ export class AppComponent {
     private stats: StatsService,
     private arti: ArticleService,
     private def: DefilanteService,
+    private lobs: LobsService,
   ){}
 
   ngOnInit(){
     this.logs.RemindLogs();
     console.log(this.logs._username,this.logs._password,this.logs._remember,"1");
+    setInterval(this.stats.getStats.bind(this.stats), 60000);
+    setInterval(this.lobs.getfavs.bind(this.lobs), 60000);
+    // setInterval(this.stats.getStats(), 500);
   }
 
+
+  intervalId;
   title = 'my-app';
   h=false;
   m=false;
