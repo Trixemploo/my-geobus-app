@@ -87,20 +87,34 @@
     </div>
   </marquee>
 
-<div style="text-align:center">
+<div *ngIf="!logs._islogged" style="text-align:center">
   <h1 style="font-family: Avenir Light, sans-serif">
     Welcome to MY GEOBUS!
   </h1>
   <br>
 </div>
 
+<br>
+<br>
+<br>
+
+<div *ngIf="logs._islogged">
+    <app-objet-image></app-objet-image>
+  </div>
+  
+  <br>
+  <br>
+  <br>
+
+
+
 
 
 <div *ngIf="logs._islogged" class="main" id="wrapper" style="margin-top: 2em;margin-bottom: 2em">
-  <div style="background-color: #3200E6;width: 60vw;border-radius: 10px;" class="elements">
+  <div style="background-color: #3200E6;width: 55vw;border-radius: 10px;" class="elements">
     <app-objet-article></app-objet-article>
   </div>
-  <div class="elements" style="transform: translateX(3%)">
+  <div class="elements" style="transform: translateY(-15%);padding-left: 1.5vw ">
       <app-objet-lobs></app-objet-lobs>
   </div>
 </div>
@@ -119,20 +133,20 @@
 
     
     
-<div *ngIf="logs._islogged">
+<!-- <div *ngIf="logs._islogged">
     <app-objet-image></app-objet-image>
   </div>
   
   <br>
   <br>
-  <br>
+  <br> -->
 
 
   <span *ngIf="logs._islogged" style="padding-left: 0.5vw;margin-bottom: 0; padding-bottom: 0; font-family: Avenir Light,sans-serif;font-size: 3rem;">Articles</span>
 
   <div *ngIf="logs._islogged">
     <div *ngFor="let a of arti.articles">
-        <div id="{{a.title}}" style="background-color: rgba(0, 153, 255, 0.418);border-radius: 10px; border: 10px outset #000; border-left-width: 0;border-right-width: 0;font-family: Avenir Light,sans-serif">
+        <div id="{{a.title}}" style="background-color: rgba(0, 153, 255, 0.418);border-radius: 10px; border: 10px outset #000; border-left-width: 0;border-right-width: 0;font-family: Avenir Light,sans-serif;padding:1em;margin-top: 2em;margin-bottom: 2em">
             <h1 style="text-align: left;font-family: Avenir Light,sans-serif;padding-left: 3rem;">{{a.title}}</h1>
             <p style="overflow-x: hidden;width: 80%;text-align: left;margin-bottom: 3em;padding-left: 3rem;">{{a.summary}}</p>
             <p style="overflow-x: hidden;width: 80%;text-align: left;margin-bottom: 3em;padding-left: 3rem;">{{a.content}}</p>
@@ -155,7 +169,7 @@
     <div class="modal-content-about" (clickOutside)="onClickedOutsideAbout($event)" style="border-radius: 15px;text-align: center;">
       <span (click)="c=!c" class="close-about">&times;</span>
       <h1 style="font-family: Avenir Light,sans-serif;color: #3200E6">MY GEOBUS&trade;</h1>
-      <p style="font-family: Avenir Light,sans-serif">Version : BETA ++</p>
+      <p style="font-family: Avenir Light,sans-serif">Version : BETA</p>
     </div>
   
   </div>

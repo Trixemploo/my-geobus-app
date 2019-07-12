@@ -14,7 +14,7 @@ export class DefilanteService {
   public defilante;
 
   getdefilante(){
-    this.http.get<[]>("https://apm-gateway-val-rct.extranet.geodis.org/t/geobus.corp.geodis.org/gest-swaggerised/VAL/dashboard/messages?profileid="+this._user.profiles[0].id,{headers: {sid:this._user.sid}, withCredentials:true}).subscribe(
+    this.http.get<[]>("https://apm-gateway-rct.extranet.geodis.org/gest/dashboard/messages?profileid="+this._user.profiles[0].id,{headers: {sid:this._user.sid}, withCredentials:true}).subscribe(
         r=>{
           console.log(this._user.profiles.id)
         this.defilante=r;

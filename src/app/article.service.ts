@@ -13,7 +13,7 @@ export class ArticleService {
     public user;
 
     getArticles() {
-      this.http.get<[]>("https://apm-gateway-val-rct.extranet.geodis.org/t/geobus.corp.geodis.org/gest-swaggerised/VAL/articles").subscribe(
+      this.http.get<[]>("https://apm-gateway-rct.extranet.geodis.org/gest/articles").subscribe(
         r=>{
           this.articles=r;
           console.log(this.articles[0].title);

@@ -66,7 +66,7 @@ export class LoginService {
       header.append('Authorization', 'Bearer d22e9ba9-d20d-3593-9177-32ce64e55cf3');
 
       console.log(username,password);
-      this.http.post("https://apm-gateway-val-rct.extranet.geodis.org/t/geobus.corp.geodis.org/gest-swaggerised/VAL/user/login",{"login":username, "password":password},
+      this.http.post("https://apm-gateway-rct.extranet.geodis.org/gest/user/login",{"login":username, "password":password},
       {headers:header, withCredentials:true})
       .subscribe(
         r =>{

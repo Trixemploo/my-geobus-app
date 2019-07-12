@@ -23,7 +23,7 @@ export class StatsService {
       var monthIndex = date.getMonth()+1;
       var year = date.getFullYear();
       this.http.post(
-        "https://apm-gateway-val-rct.extranet.geodis.org/t/geobus.corp.geodis.org/gest/VALproxy/gest/rest/statistics/global",
+        "https://apm-gateway-rct.extranet.geodis.org/gest/statistics/global",
         {"startTime": `${year}-${monthIndex}-${day}T00:00:00.000GMT`, 
         "endTime": `${year}-${monthIndex}-${day}T23:59:59.000GMT`, 
         "hideScrutationExchange": 0},
@@ -35,7 +35,7 @@ export class StatsService {
         },
         e=>{console.log("stats error")});
     }
-
+     // https://apm-gateway-rct.extranet.geodis.org/gest
 
   constructor(
     private http: HttpClient,

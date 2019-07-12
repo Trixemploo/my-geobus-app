@@ -19,7 +19,7 @@ export class LobsService {
 
   getfavs() {
     if(this._sidkey && this._sidkey!="off")
-    this.http.get<[]>("https://apm-gateway-val-rct.extranet.geodis.org/t/geobus.corp.geodis.org/gest/VALproxy/gest/rest/favoritesexchange?startTime=2018-11-27 00:00:00&endTime=2019-07-27 23:00:00",{headers: {sid:this._sidkey.sid}, withCredentials:true}).subscribe(
+    this.http.get<[]>("https://apm-gateway-rct.extranet.geodis.org/gest/favoritesexchange?startTime=2018-11-27 00:00:00&endTime=2019-07-27 23:00:00",{headers: {sid:this._sidkey.sid}, withCredentials:true}).subscribe(
       r=>{
         this.fluxs=r;}, e=>console.log("error"))
   }
