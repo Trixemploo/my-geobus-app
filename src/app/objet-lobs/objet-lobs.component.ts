@@ -9,7 +9,7 @@ import { LobsService } from '../lobs.service';
 export class ObjetLobsComponent implements OnInit {
 
   constructor(
-    private lobsService:LobsService) { }  
+    public lobsService:LobsService) { }  
     o(oo){
       return Object.keys(oo)
     }

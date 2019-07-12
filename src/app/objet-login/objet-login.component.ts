@@ -12,7 +12,7 @@ export class ObjetLoginComponent implements OnInit {
   password;
 
   constructor(
-    private loginService : LoginService,
+    public loginService : LoginService,
     private app: AppComponent,
   ) { }
 

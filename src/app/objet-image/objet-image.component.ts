@@ -21,7 +21,7 @@ export class ObjetImageComponent implements OnInit {
 
   constructor(
     private http: HttpClient,
-    private appsService:AppsService) { }
+    public appsService:AppsService) { }
     // apps = [];
     // list = [];
     // list2 =[];

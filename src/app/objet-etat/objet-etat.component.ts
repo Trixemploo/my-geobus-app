@@ -9,7 +9,7 @@ import { LobsgeneralService } from '../lobsgeneral.service';
 export class ObjetEtatComponent implements OnInit {
 
   constructor(
-    private lobsgeneralService: LobsgeneralService,
+    public lobsgeneralService: LobsgeneralService,
   ) { }
 
   o(oo){

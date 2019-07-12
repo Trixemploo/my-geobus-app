@@ -13,7 +13,7 @@ export class ObjetArticleComponent implements OnInit {
   articles;
 
   constructor(
-    private arti: ArticleService,
+    public arti: ArticleService,
     private logs: LoginService,
   ) { }
 

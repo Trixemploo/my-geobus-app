@@ -15,9 +15,9 @@ import { LobsService } from './lobs.service';
 })
 export class AppComponent {
   constructor(
-    private logs: LoginService,
+    public logs: LoginService,
     private cookieService: CookieService,
-    private stats: StatsService,
+    public stats: StatsService,
     private arti: ArticleService,
     private def: DefilanteService,
     private lobs: LobsService,

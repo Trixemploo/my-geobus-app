@@ -23,7 +23,7 @@ export class ObjetSettingsComponent implements OnInit {
   constructor(
     private http: HttpClient,
     private lobsService:LobsService,
-    private appsService:AppsService) { }
+    public appsService:AppsService) { }
    
 }
 
